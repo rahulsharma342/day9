@@ -7,7 +7,7 @@ function App() {
   //  fetch data from json server
   function fetchData() {
     axios
-      .get("http://localhost:3000/users")
+      .get("https://day9-rzm8.onrender.com/users")
       .then((response) => {
         console.log("FULL RESPONSE 👉", response);
         console.log("DATA 👉", response.data);
@@ -34,7 +34,7 @@ function App() {
       return;
     }
     // post request to json server
-    axios.post("http://localhost:3000/users", {
+    axios.post("https://day9-rzm8.onrender.com/users", {
       name: name.value,
       email: email.value,
       mobile_n: mobile_n.value,
@@ -48,7 +48,7 @@ function App() {
     });
   } 
  function deleteUser(id){
-  axios.delete(`http://localhost:3000/users/${id}`)
+  axios.delete(`https://day9-rzm8.onrender.com/users/${id}`)
   .then((res)=>{
     console.log(res.data);
     fetchData();
@@ -77,7 +77,7 @@ function App() {
       return;
     }
     
-    axios.patch(`http://localhost:3000/users/${id}`, {
+    axios.patch(`https://day9-rzm8.onrender.com/users/${id}`, {
       name: newName,
       email: newEmail,
       mobile_n: newMobileN,
